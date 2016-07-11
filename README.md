@@ -25,4 +25,18 @@ Let's install python if you don't have it and at a minimum the following:
   1. scipy  2. numpy  3. matplotlib 
   4. pandas
 
+  ####Checking Versions
+  `
+  python --version`
+  
+  Will Check for your python version. 
+  
+```# scipy
+import scipyprint('scipy: {}'.format(scipy.__version__)) # numpyimport numpyprint('numpy: {}'.format(numpy.__version__))
+ # matplotlibimport matplotlibprint('matplotlib: {}'.format(matplotlib.__version__)) # pandasimport pandasprint('pandas: {}'.format(pandas.__version__))```
+
+
+
+  
+  
   
