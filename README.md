@@ -42,3 +42,63 @@ If you do not have any of these installed a quick Google search with the name of
 
 You coud also use Anaconda or another packaging system manager to help install everything for python.
 https://www.continuum.io/downloads
+
+# Getting to know Python
+
+A quick look at Python for those who know a programming language or two. 
+##Strings
+```
+#Strings
+data = 'hello world'
+print(data[0])
+print(len(data))
+print(data)
+```
+
+This should print out
+
+
+```
+h 
+11 
+hello world
+```
+
+##Numbers
+```
+# Numbersvalue = 343.5print(value)value = 10print(value)
+```
+You should get: 
+
+```
+343.5 
+10
+```
+##Boolean
+
+```
+# Booleana = Trueb = Falseprint(a, b)
+```
+
+Gives you ```(True, False)```
+
+##Multiple Assignments
+
+```
+# Multiple Assignmenta, b, c = 1, 2, 3print(a, b, c)
+```
+
+Gives you back ```(1,2,3)```
+
+##No Value
+
+When a value is not provided None will print. 
+
+## If-Then
+
+```
+speed = 30if speed == 30:	print 'Cheetah'
+elif speed > 1000:	print 'Rocket' 
+else:	print 'Running'
+```
+Notice the tabbing with the code. Python is sensitive to how you tab which is why some people enjoy coding in Python. Also take a look at the colon (:) at the end of the conditions. Knowing these two pieces of information will help you resolve early headaches if you're not used to coding in python. 
