@@ -24,6 +24,7 @@ Let's install python if you don't have it and at a minimum the following:
 
   1. scipy  2. numpy  3. matplotlib 
   4. pandas
+  5. SciKitLearn
 
   ####Checking Versions
   `
@@ -33,10 +34,11 @@ Let's install python if you don't have it and at a minimum the following:
   
 ```# scipy
 import scipyprint('scipy: {}'.format(scipy.__version__)) # numpyimport numpyprint('numpy: {}'.format(numpy.__version__))
- # matplotlibimport matplotlibprint('matplotlib: {}'.format(matplotlib.__version__)) # pandasimport pandasprint('pandas: {}'.format(pandas.__version__))```
+ # matplotlibimport matplotlibprint('matplotlib: {}'.format(matplotlib.__version__)) # pandasimport pandasprint('pandas: {}'.format(pandas.__version__))
+# scikit-learnimport sklearnprint('sklearn: {}'.format(sklearn.__version__))
+```
 
+If you do not have any of these installed a quick Google search with the name of the module and install will provide you with the official installation instructions. 
 
-
-  
-  
-  
+You coud also use Anaconda or another packaging system manager to help install everything for python.
+https://www.continuum.io/downloads
