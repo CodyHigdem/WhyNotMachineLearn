@@ -102,3 +102,23 @@ elif speed > 1000:	print 'Rocket'
 else:	print 'Running'
 ```
 Notice the tabbing with the code. Python is sensitive to how you tab which is why some people enjoy coding in Python. Also take a look at the colon (:) at the end of the conditions. Knowing these two pieces of information will help you resolve early headaches if you're not used to coding in python. 
+
+## For-Loop
+
+```
+for i in range(10):
+	print i
+```
+returns
+```0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
