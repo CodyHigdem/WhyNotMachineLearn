@@ -122,3 +122,93 @@ returns
 9
 10
 ```
+## While-Loop
+
+```
+i = 0
+while i < 10:
+	print i
+	i += 1
+```
+
+Returns
+```
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+```
+
+#Data Structures
+
+##Tuples
+A tuple is a sequence of immutable Python objects. Tuples are sequences, just like lists. The differences between tuples and lists are, the tuples cannot be changed unlike lists and tuples use parentheses, whereas lists use square brackets. - [http://www.tutorialspoint.com/python/python_tuples.htm](Read More)
+
+So like the above notes say. Tuples are read-only collections of items.
+
+```
+a = (1,3,4)
+print a
+```
+
+Returns
+```
+(1,2,4)
+```
+
+##List
+Lists are square bracket notations and can be indexed using array notation. 
+
+```
+myList = [1,2,3]
+print("Zeroth value: %d") % myList[0]
+myList.append(4)
+print("list Lenght: %d") % len(myList)
+for value in myList:
+	print value
+```
+Returns:
+```
+Zeroth Value: 1
+List Length: 4
+1
+2
+3
+4
+```
+
+##Dictionary
+
+Is kind of like a json data set. They ar emapped with names to values so very similiar to key value pairs. 
+
+```
+myDict = {'a':1, 'b':2, 'c':3}
+print("A vlaue: %d") % myDict['a']
+myDict['a'] = 11
+print("A value: %d") % myDict['a']
+print("Keys: %s") % myDict.keys()
+print("Values: %s") % myDict.values()
+for key in myDict.keys():
+	print myDict[key]
+```
+
+returns
+```
+A value: 1
+A value: 11
+Keys: ['a','c','b']
+values: [11,3,2]
+11
+3
+2
+```
+
+##Functions
+
+
