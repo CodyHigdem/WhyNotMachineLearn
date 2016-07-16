@@ -210,5 +210,19 @@ values: [11,3,2]
 ```
 
 ##Functions
+Don't forget about white spacing when it comes to Python that's the easiest hangup for people new to it. Functions and loops will be a pain if you're not aware of it. 
+```
+def mysum(x,y):
+	return x+y
+#test the function
+result = mysum(1,3)
+print(result)
+```
+
+returns:
+``` 4 ```
+
+
+
 
 
