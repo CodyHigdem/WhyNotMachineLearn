@@ -222,7 +222,50 @@ print(result)
 returns:
 ``` 4 ```
 
+#NumPy Crash Course
+NumPy is the foundation for all of the data structures and operations that you'll be using in SciPy. 
 
+##Create Array
+```
+import numpy
+myList = [1,2,3]
+myArray = numpy.array(myList)
+print(myArray)
+print(myArray.shape)
+```
+
+Returns
+```
+[1,2,3]
+(3)
+```
+
+##Access Data
+Array notations and ranges can be used to access data in NumPy arrays
+
+```
+#access values
+import numpy
+myList = [[1,2,3], [3,4,5]]
+myArray = numpy.array(myList)
+print(myArray)
+print(myArray.shape)
+print("First row: %s") % myArray[0]
+print("Last row: %s") % myArray[-1]
+print("Specific row and col: %s") % myArray[0,2]
+print("Whole col: %s") % myArray[:,2]
+```
+
+Returns the following:
+```
+[[1 2 3]
+ [3 4 5]]
+(2,3)
+First row: [1 2 3]
+Last row: [3 4 5]
+Specific row and col: 3
+Whole col: [3 5]
+```
 
 
 
