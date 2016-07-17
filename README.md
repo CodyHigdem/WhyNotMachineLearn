@@ -266,6 +266,23 @@ Last row: [3 4 5]
 Specific row and col: 3
 Whole col: [3 5]
 ```
+##Math
 
+NumPy arrays can be used in all adding
+
+```
+import numpy
+myArray1 = numpy.array([2,2,2])
+myArray2 = numpy.array([5,5,5])
+print("Addition: %s") % (myArray1 + myArray2)
+print("Multiplication: %s) % (myArray1 * myArray2)
+```
+Returns:
+```
+Addition: [7 7 7]
+Multiplication: [10 10 10]
+```
+
+#Matplotlib Crash Course
 
 
