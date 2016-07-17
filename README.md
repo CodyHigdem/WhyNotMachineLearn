@@ -284,5 +284,37 @@ Multiplication: [10 10 10]
 ```
 
 #Matplotlib Crash Course
-
+ 
+ Matplotlib can be used for creating a variety of charts and plots. Commonly for calling some data (.plot()), calling multiple functions to setup the properties of a plot like the labels and colors. Making the plot visible using .show()
+ 
+ ##Line Plot
+ 
+ A simple line plot from one dimensional data
+ ```
+ import matplotlib.pyplot as plt
+ import numpy
+ myArray = numpy.array([1,2,3])
+ plt.plot(myArray)
+ plt.xlabel('some x axis')
+ plt.ylabel('some y axis')
+ plt.show()
+ ```
+ 
+ Returns:
+ 
+ ##Scatter Plot
+ scatter plot with two dimensional data
+ ```
+ import matplotlib.pyplot as plt
+ import numpy
+ x = numpy.array([1,2,3])
+ y = numpy.array([2,4,6])
+ plt.scatter(x,y)
+ plt.xlabel('some x axis')
+ plt.ylabel('some y axis')
+ plt.show()
+ ```
+ Returns:
+ 
+ 
 
