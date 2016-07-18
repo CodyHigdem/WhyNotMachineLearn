@@ -317,4 +317,67 @@ Multiplication: [10 10 10]
  Returns:
  
  
+#Pandas Crash Course
 
+##Series
+a one dimensional array where we can name columns and rows. 
+```
+import numpy
+import pandas
+myArray = numpy.array([1,2,3])
+rowNames = ['a', 'b', 'c']
+mySeries = pandas.Series(myArray, index=rowNames)
+print(mySeries)
+```
+returns:
+```
+a 1
+b 2
+c 3
+```
+You will be able to access the data just like a dictionary. 
+```
+print(mySeries[0])
+print(mySeries['a'])
+```
+Will return: 
+```
+1
+1
+```
+##DataFrame
+ is a multi-dimensional array where rows and columns can be labeled. 
+ 
+ ```
+ import numpy
+ import pandas
+ myArray = numpy.array([[1,2,3], [4,5,6]])
+ rowNames = ['a', 'b']
+ colNames = ['one', 'two', 'three']
+ myDataFrame = pandas.DataFrame(myArray, index-rowNames, columns=colNames)
+ print(myDataFrame)
+ ```s
+ 
+ Will get you the following: 
+ ```
+   One two three
+ a  1   2   3
+ b  4   5   6
+ ```
+ and it can be indexed using column names
+ ```
+ print("method 1: ")
+ print("one column: %s") % myDataFrame['one']
+ print("method 2:")
+ print("one column: %s") % myDataFrame.one
+ ```
+ 
+ will return:
+ ```
+ method 1:
+ a 1
+ b 4
+ method 2:
+ a 1
+ b 4
+ ```
