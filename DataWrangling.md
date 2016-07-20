@@ -21,7 +21,7 @@ When field values have spaces the values often are quoted. The default quote cha
 #Demo Data Set
 The data set that will be used is the Pima Indians data set. The data is freely available from the UCI Machine Learning Repository. [https://archive.ics.uci.edu/ml/datasets/Pima+Indians+Diabetes]()
 
-#Load CSV Files
+#Load CSV Files with Python
 The python api provides a module CSV and the function reader() which then can be converted into NumPy Array. 
 
 ```
@@ -40,3 +40,52 @@ This should return:
 ```
 
 The example above loads an object that iterates over each row of the data an dcan easilly be converted into a NumPy array. Then it prints the shape of the array. 
+
+#Load CSV Files with NumPy
+
+You can also use numpy.loadtxt() function. The function assumes no header and all the data has the same format. 
+
+```
+import numpy
+fileName = 'pima-indians-diabets.data.csv'
+raw_data = open(fileName, 'rb')
+data = numpy.loadtxt(raw_data, delimiter=",")
+print(data,shape)
+```
+
+Doing it this way will load the file as a numpy.ndarray and print the shape of the data so and should return: 
+```
+(768, 9)
+```
+
+You can also pull from the url.
+
+```
+import numpy
+import urllib
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
+raw_data = urllib.urlopen(url)
+dataSet = numpy.loadtxt(raw_data, delimiter=",")
+print(dataset.shape)
+```
+This produces the exact same results but pulling from a web server instead of locally. 
+
+```
+(768, 9(
+```
+
+#Load CSV Files with Pandas
+pandas.read_csv() function works with csv files too. The function returns a panda DataFrame allowing for immediate manipulation and plotting. 
+
+```
+import pandas
+fileName = "pima-indians-diabets.data.csv"
+name = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+data = pandas.read_csv(fileName, name=names)
+print(data.shape)
+```
+Remember you have to explicitly specify the names of each attribute in DataFrames. But outside of this it returns the exact same. 
+```
+(768, 9)
+```
+
