@@ -88,4 +88,16 @@ Remember you have to explicitly specify the names of each attribute in DataFrame
 ```
 (768, 9)
 ```
+Again you can use a url to load the data. 
+```
+import pandas
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
+names = ["pres", "plas", "pres", "skin", "test", "mass", "pedi", "age", "class"]
+data = pandas.read_csv(url, names=names)
+print(dataset.shape)
+```
 
+Returns: 
+```
+(768, 9)
+```
