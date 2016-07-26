@@ -56,4 +56,16 @@ class      int64
 dtype: object
 ```
 
+##Stats 
+
+The describe() function on Pandas DataFrame focuses on 8 properties: 
+Count
+Mean
+Standard Deviation (STD)
+Minimum Value
+25th Percentile
+50th Percentile (Median)
+75th Percentile
+Maximum Value
+
 
