@@ -68,4 +68,24 @@ Minimum Value
 75th Percentile
 Maximum Value
 
+```
+import pandas
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+data = pandas.read_csv(url, names=names)
+pandas.set_option('display.width', 100)
+pandas.set_option('precision', 3)
+description = data.describe()
+print(description)
+```
 
+classification problems you need to know how balances the class values are. Highly imbalanced problems (more observations for one class than another) are common and may need special handling in data preparation stage of you rproject. 
+
+```
+import pandas
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+data = pandas.read_csv(url, names=names)
+class_counts = data.groupby('class').size()
+print(class_counts)
+```
