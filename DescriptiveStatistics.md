@@ -89,3 +89,21 @@ data = pandas.read_csv(url, names=names)
 class_counts = data.groupby('class').size()
 print(class_counts)
 ```
+
+returning
+
+```
+class
+0 500
+1 268
+```
+There are way more class 0 (no onset of diabetes) than there are of class 1 (onset)
+
+##Correlations
+
+Is the relationship between two variables and how they may or may not change together. A commong method for calculating is Pearson's Correlatoin Coefficient, that assumes a normal distribution of attributes. -1 or 1 shows a full negative or positive correlation respectively and a 0 shows no correlation at all. 
+
+some machine learning algorithms can suffer from poor performance if there ar ehighly correlated attributes in the dataset (linear & logistic regression)
+
+So try to review the pair-wise correlations of attributes in your dataset. You can use the cor() function from Pandas Framework to calculate a correlation matrix. 
+
