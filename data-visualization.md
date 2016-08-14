@@ -74,3 +74,16 @@ cax = ax.matshow(correlations, vmin=-1, vmax=1)
 fig.colorbar(cax)
 plt.show()
 ```
+
+##Scatter Plot Matrix
+a scatter plot is a relationship between two variabs. One axis for each attribute. Drawing all of the scatter plots together is considered a scatter plot matrix. You can see strucutred relationships between variables. 
+```
+import matplotlib.pyplot as plt
+import pandas
+from pandas.tools.plotting import scatter_matrix
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+data = pandas.read_csv(url, names=names)
+scatter_matrix(data)
+plt.show()
+```
