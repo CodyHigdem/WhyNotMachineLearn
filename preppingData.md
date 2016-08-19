@@ -25,3 +25,24 @@ rescaledX = scaler.fit_transform(X)
 numpy.set_printoptions(precision=3)
 print(rescaledX[0:5,:])
 ```
+##Standarizing Data
+
+Standarizing data is useful for data that we expect to be equally distributed as opposed to skewed towards one way or another. 
+
+```
+from sklearn.preprocessing import StandardScaler
+import pandas
+import numpy
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+dataFrame = pandas.read_csv(url, names=names)
+array = dataFrame.values
+#seperate array into input and output
+X = array[:,0:8]
+Y = array[:,8]
+scaler = StandardScaler().fit(X)
+rescaledX = scaler.transform(X)
+#summary of data
+numpy.set_printoptions(precision=3)
+print(rescaledX[0:5,:])
+```
