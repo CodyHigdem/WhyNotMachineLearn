@@ -46,3 +46,26 @@ rescaledX = scaler.transform(X)
 numpy.set_printoptions(precision=3)
 print(rescaledX[0:5,:])
 ```
+
+##Normalize Data
+
+When you normalize data it entails rescaling everything to have a max of 1. think vectors with a length of 1 in linear algebra. This can be useful for datasets with lots of zeros of extremes that need to be associated within a relative terms of features. Think when looking at housing prices there are sqft, number of baths, number of bedrooms so on. 
+
+There is a Normalizer class in scikit-learn that can help with this. 
+```
+from sklearn.preprocessing import Normalizer
+import pandas
+import numpy
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass, 'pedi', 'age', 'class']
+dataFrame = pandas.read_csv(url, names=names)
+array = dataFrame.values
+X = array[:,0:8]
+Y = array[:,8]
+scaler = Normalizer().fit(X)
+normalizedX = scaler.transform(X)
+
+numpy.set_printoptions(precision=3)
+print(normalizedX[0:5,:])
+```
+
