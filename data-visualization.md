@@ -1,6 +1,6 @@
 #Data visualization
 
-##Hisograms
+##Histograms
 
 ```
 import matplotlib.pyplot as plt

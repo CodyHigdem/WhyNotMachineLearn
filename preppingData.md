@@ -69,3 +69,20 @@ numpy.set_printoptions(precision=3)
 print(normalizedX[0:5,:])
 ```
 
+##Binarize Data
+
+```
+from sklearn.preprocessing import Binarizer
+import pandas
+import numpy
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+dataFrame pandas.read_csv(url, names=names)
+array = dataFrame.values
+X = array[:,0:8]
+Y = array[:,8]
+binarizer = Binarizer(threashold=0.0).fit(X)
+binaryX = binarizer.transform(X)
+numpy.set_printoptions(precision=3)
+print(binaryX[0:5,:])
+```
