@@ -5,6 +5,7 @@ It's best to do feature selection before you begin modeling data so that you can
 ##Univariate Selection
 
 There is a SelectKBest class that can be used with a suite of different statistical tests to select a specified number of features. 
+Use the Chi-squared test for non-negative features to select four of the best features from the datasets. 
 ```
 import pandas
 import numpy
