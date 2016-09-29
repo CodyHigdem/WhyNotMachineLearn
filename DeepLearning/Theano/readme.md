@@ -1,0 +1,2 @@
+#Theano
+Theano is a slick library for evaluating mathematical expressions involving multi-dimensional arrays effeciently. So you can use GPU and CPU to crunch numbers effeciently and effectively which makes it great for neural networks. 
