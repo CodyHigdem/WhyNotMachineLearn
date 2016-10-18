@@ -1,5 +1,6 @@
 from keras.models import Sequential
 from keras.layers import Dense
+import urllib
 import numpy
 #fix random seed for reproducibility
 seed = 7
@@ -9,8 +10,8 @@ url = "https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-di
 raw_data = urllib.urlopen(url)
 dataSet = numpy.loadtxt(raw_data, delimiter=",")
 #lets split the data into the 8 input variables and then assign a single output
-X = dataset[:,0:8]
-Y = dataset[:,8]
+X = dataSet[:,0:8]
+Y = dataSet[:,8]
 #the output has 1 neuro layer whether diabetes gonna happen or not
 #Then second layer has 8 neurons
 #then 12 neuroes with 8 input variables to said 12
