@@ -18,3 +18,13 @@ def create_model():
 	return model
 
 #fix random seed for reproducibility
+seed = 7
+numpy.random.seed(seed)
+#load pima indians dataset
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
+raw_data = urllib.urlopen(url)
+dataSet = numpy.loadtxt(raw_data, delimiter=",")
+#lets split the data into the 8 input variables and then assign a single output
+X = dataSet[:,0:8]
+Y = dataSet[:,8]
+#create th emodel
