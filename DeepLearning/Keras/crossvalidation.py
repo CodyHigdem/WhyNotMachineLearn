@@ -28,3 +28,8 @@ dataSet = numpy.loadtxt(raw_data, delimiter=",")
 X = dataSet[:,0:8]
 Y = dataSet[:,8]
 #create th emodel
+model = KerasClassifier(build_fn=create_model, nb_epoch=150, batch_size=10, verbose=0)
+#evaluate using 10-fold cross validation
+kfold = StratifiedKFold(y=Y, n_folds=10, shuffle=True, random_state=seed)
+results = cross_val_score(model, X, Y, cv=kfold)
+print(results.mean())
