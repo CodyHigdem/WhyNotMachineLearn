@@ -28,3 +28,14 @@ encoder.fit(Y)
 encoded_Y = encoder.transform(Y)
 # convert integers to dummy variables (I think this ws hot coding)
 dummy_y = np_utils.to_categorical(encoded_Y)
+
+#define baseline model
+def baseline_model():
+	#create the model
+	model = Sequential()
+	model.add(Dense(4, input_dim=4, init='normal', activation='relu'))
+	model.add(Dense(3, init='normal', activation='sigmoid'))
+	#compile model
+	model.compile(loss='categorical_crossentropy', optimizer="adam", metrics=['accuracy'])
+	return model
+
