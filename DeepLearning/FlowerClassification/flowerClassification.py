@@ -22,4 +22,9 @@ dataSet = numpy.loadtxt(raw_data, delimiter=",")
 X = dataSet[:,0:4].astype(float)
 Y = dataSet[:,4]
 
-#encode class values as integers
+#encode class values as integerss
+encoder = LabelEncoder()
+encoder.fit(Y)
+encoded_Y = encoder.transform(Y)
+# convert integers to dummy variables (I think this ws hot coding)
+dummy_y = np_utils.to_categorical(encoded_Y)
