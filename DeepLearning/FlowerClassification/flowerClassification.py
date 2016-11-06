@@ -42,3 +42,4 @@ def baseline_model():
 estimator = KerasClassifier(build_fn=baseline_model, nb_epoch=200, batch_size=5, verbose=0)
 
 kfold = KFold(n=len(X), n_folds=10, shuffle=True, random_state=seed)
+
