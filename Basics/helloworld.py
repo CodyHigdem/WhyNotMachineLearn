@@ -14,3 +14,7 @@ clf = tree.DecisionTreeClassifier()
 #in scikit the trainer is in the classifiered object and called fit
 clf = clf.fit(features, labels)
 print clf.predict([160, 0])
+
+#Now you can interchange features and labels with anything
+#Think weight, texture- could be weight, seats, label
+# now you can classify vehicles and oranges by simply redoing the features/labels
