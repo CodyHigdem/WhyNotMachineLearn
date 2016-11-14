@@ -16,9 +16,9 @@ test_iris = [0, 50, 100]
 
 #set u the training data
 #remove test data from training dataset
-train_target = np.delete(iris.target, text_iris)
+train_target = np.delete(iris.target, test_iris)
 #establish training data
-train_data = np.delete(iris.data, text_iris, axis=0)
+train_data = np.delete(iris.data, test_iris, axis=0)
 
 #testing data, just the three examples above
 test_target = iris.target[test_iris]
