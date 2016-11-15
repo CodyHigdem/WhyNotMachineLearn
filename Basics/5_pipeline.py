@@ -26,3 +26,17 @@ from sklearn.metrics import accuracy_score
 print accuracy_score(Y_test, predictions)
 #Because this samples split and tests the samle each time you can see the differences in accuracy by running the script several times. 
 #The ranges go from 92% to 97%
+
+
+#compare a different classifier
+from sklearn.neighbors import KNeighborsClassifier
+k_classifier = KNeighborsClassifier()
+
+#then like the other examples train the classifier with the training data
+k_classifier.fit(X_train, Y_train)
+#create the predictions of all the test data
+k_predictions = k_classifier.predict(X_test)
+
+#check accuracy
+from sklearn.metrics import accuracy_score
+print accuracy_score(Y_test, k_predictions)
