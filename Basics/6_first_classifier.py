@@ -1,4 +1,7 @@
-import random
+from scipy.spatial import distance
+
+def euc(a,b):
+	return distance.euclidean(a,b)
 #Make a classifier class
 class ScrappyKNN():
 	def fit(self, X_train, y_train):
@@ -11,9 +14,12 @@ class ScrappyKNN():
 		predictions = []
 		#each row contains the features of one testin gexample
 		for row in X_test:
-			label = random.choice(self.y_train)
+			label = self.closest(row)
 			predictions.append(label)
 		return predictions
+
+	def closest(self, row):
+		pass
 
 
 
