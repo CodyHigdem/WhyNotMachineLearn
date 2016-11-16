@@ -1,27 +1,39 @@
 from scipy.spatial import distance
 
-def euc(a,b):
-	return distance.euclidean(a,b)
-#Make a classifier class
+def euc(a, b):
+    return distance.euclidean(a, b)
+
+
 class ScrappyKNN():
-	def fit(self, X_train, y_train):
-		self.X_train = X_train
-		self.y_train = y_train
+    """
+    Barebones KNN
+    """
 
-	def predict(self, X_test):
-		#return an array of predications
-		#X_test should be a 2d array.
-		predictions = []
-		#each row contains the features of one testin gexample
-		for row in X_test:
-			label = self.closest(row)
-			predictions.append(label)
-		return predictions
+    def fit(self, X_train, y_train):
 
-	def closest(self, row):
-		pass
+        self.X_train = X_train
+        self.y_train = y_train
 
+    def predict(self, X_test):
 
+        predictions = []
+        for row in X_test:
+            # label = random.choice(self.y_train)  # Random decision
+            label = self.closest(row)
+            predictions.append(label)
+
+        return predictions
+
+    def closest(self, row):
+        # Distance from test point to first training point
+        best_distance = euc(row, self.X_train[0])  # Shortest distance found so far
+        best_index = 0  # index of closest training point
+        for i in xrange(1, len(self.X_train)):  # Iterate over all other training points
+            distance = euc(row, self.X_train[i])
+            if distance < best_distance:  # Found closer, update
+                best_distance = distance
+                best_index = i
+        return self.y_train[best_index]  # closest example
 
 #Train and Test
 from sklearn import datasets
