@@ -1,3 +1,4 @@
+import random
 #Make a classifier class
 class ScrappyKNN():
 	def fit(self, X_train, y_train):
@@ -5,7 +6,14 @@ class ScrappyKNN():
 		self.y_train = y_train
 
 	def predict(self, X_test):
-		pass
+		#return an array of predications
+		#X_test should be a 2d array.
+		predictions = []
+		#each row contains the features of one testin gexample
+		for row in X_test:
+			label = random.choice(self.y_train)
+			predictions.append(label)
+		return predictions
 
 
 
