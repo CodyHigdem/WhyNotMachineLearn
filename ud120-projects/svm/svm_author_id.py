@@ -18,17 +18,21 @@ from email_preprocess import preprocess
 ### and testing datasets, respectively
 ### labels_train and labels_test are the corresponding item labels
 features_train, features_test, labels_train, labels_test = preprocess()
-
-
+#These twolinesreducethetrainingsetsdownto 1%of their originals.
+features_train=features_train[:len(features_train)/100]
+labels_train=labels_train[:len(labels_train)/100]
 
 from sklearn.svm import SVC
 clf = SVC(kernel="linear")
-
+t0 =time()
 #fit the data
 print ('fitting data now')
 clf.fit(features_train, labels_train)
+print "trainingtime: ", round(time()-t0,3),"s"
 #let it make a prediction
+t0= time()
 prediction = clf.predict(features_test)
+print "trainingtime: ", round(time()-t0,3),"s"
 print('checking accuracy')
 from sklearn.metrics import accuracy_score
 accuracy = accuracy_score(prediction, labels_test)
