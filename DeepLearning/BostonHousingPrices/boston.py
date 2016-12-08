@@ -40,4 +40,9 @@ kfold = KFold(n=len(X), n_folds=10, random_state=seed)
 results = cross_val_score(estimator, X, Y, cv=kfold)
 print("Baseline: %.2f (%.2f) MSE " % (results.mean(), results.std()))
 
+#CRIM	ZN		CHAS	NOX	RM	AGE	DIS	RAD TAX	PTRATIO	B	LSTAT	MEDV
+#0.00632     2.310  0  0.5380  6.5750  65.20  4.0900   1  296.0  15.30 396.90   4.98  24.00
+#INDUS 18.00
 
+
+print results.predict([0.00632, 18.00, 2.310, 0, 0.5380, 6.5750, 65.20, 4.0900, 1, 296.0, 15.30, 396.90, 4.98,  24.00])
