@@ -1,6 +1,6 @@
 #plot ad hoc instance
 from keras.datasets import mnist
-import matplotlib.pyplot as plot
+import matplotlib.pyplot as plt
 #load (downloaded if needed)
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
 
